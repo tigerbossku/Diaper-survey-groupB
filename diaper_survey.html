@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaper Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #a8e6cf, #dcedc1);
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        form {
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Diaper Survey</h2>
+        <p>Help us improve diaper design by answering a few quick questions!</p>
+        <form id="surveyForm">
+            <label>Are you a parent or caregiver?</label>
+            <select name="caregiver" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Who is the diaper for?</label>
+            <select name="userType" required>
+                <option value="Newborn">Newborn</option>
+                <option value="Elderly">Elderly</option>
+                <option value="Bedridden">Bedridden</option>
+            </select>
+
+            <label>What type of diapers do you prefer?</label>
+            <select name="diaperType" required>
+                <option value="Disposable">Disposable</option>
+                <option value="Reusable">Reusable</option>
+                <option value="Both">Both</option>
+            </select>
+
+            <label>What is the most important factor when choosing a diaper?</label>
+            <select name="importantFactor" required>
+                <option value="Comfort">Comfort</option>
+                <option value="Price">Price</option>
+                <option value="Absorbency">Absorbency</option>
+                <option value="Eco-friendliness">Eco-friendliness</option>
+            </select>
+
+            <label>What issues do you currently face with diapers?</label>
+            <select name="issues" required>
+                <option value="Leaks">Leaks</option>
+                <option value="Rashes">Rashes</option>
+                <option value="Fit">Fit</option>
+                <option value="Cost">Cost</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Would you be interested in an expandable, flexible diaper?</label>
+            <select name="expandableInterest" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe">Maybe</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for submitting the survey!');
+        });
+    </script>
+</body>
+</html>
